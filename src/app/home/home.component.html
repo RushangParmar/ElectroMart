@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="top-section">
+    <div class="slideshow-container">
+      <div class="slideshow">
+        <div class="slide">
+          <img src="assets/image/1.jpeg" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="assets/image/2.jpeg" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="assets/image/4.jpeg" alt="Image 3">
+        </div>
+        <!-- Duplicates for looping effect -->
+        <div class="slide">
+          <img src="assets/image/1.jpeg" alt="Image 4">
+        </div>
+        <div class="slide">
+          <img src="assets/image/2.jpeg" alt="Image 5">
+        </div>
+        <!-- Additional duplicates to make looping smooth -->
+        <div class="slide">
+          <img src="assets/image/4.jpeg" alt="Image 6">
+        </div>
+        <div class="slide">
+          <img src="assets/image/1.jpeg" alt="Image 7">
+        </div>
+      </div>
+      <button class="prev" (click)="moveSlide(-1)">&#10094;</button>
+      <button class="next" (click)="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="address">
+      <p>Contact Number 1: (123) 456-7890</p>
+      <p>Contact Number 2: (098) 765-4321</p>
+      <p>Address: 123 Business Street, Business City, BC 12345</p>
+    </div>
+    <div class="business-card">
+      <img src="assets/image/5.jpeg" alt="Business Card">
+    </div>
+  </div>
+</div>

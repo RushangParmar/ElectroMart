@@ -1,0 +1,36 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Adjust the gap between cards as needed */
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 15px); /* 3 cards per row with a gap */
+  box-sizing: border-box;
+  max-width: calc(33.333% - 15px);
+  background: #2d2d2d; /* Dark background for the card */
+  border: 1px solid #444; /* Darker card border */
+  border-radius: 5px; /* Rounded corners */
+  color: #dcdcdc; /* Light text color */
+}
+
+.card-body {
+  padding: 15px; /* Padding inside the card */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Adjust the title font size */
+  margin-bottom: 10px; /* Space below the title */
+  color: #66c0f4; /* Light blue color for the title */
+}
+
+.card-text {
+  margin-bottom: 10px; /* Space between text items */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Rounded corners for the image */
+  border: 2px solid #66c0f4; /* Light blue border for the image */
+}

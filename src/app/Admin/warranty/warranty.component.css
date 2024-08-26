@@ -1,0 +1,35 @@
+/* Container for the table to apply margins */
+.data-table-container {
+    margin: 0 3%; /* 3% space on both sides */
+  }
+  
+  /* Style for the table */
+  .data-table {
+    width: 100%; /* Make sure the table takes full width within the container */
+    border-collapse: separate; /* Allows for border radius to be applied */
+    border-spacing: 0; /* Removes default spacing between table cells */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #444; /* Border color for visibility */
+    padding: 10px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .data-table th {
+    background-color: #333; /* Darker background for table headers */
+    color: #fff; /* White text color for headers */
+  }
+  
+  .data-table td {
+    background-color: #737272; /* Slightly lighter dark background for table cells */
+    color: #ddd; /* Light text color for table cells */
+  }
+  
+  /* Optional: Add a shadow for better visibility */
+  .data-table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+  }
+  

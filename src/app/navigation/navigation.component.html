@@ -1,0 +1,15 @@
+<nav>
+  <div class="navbar">
+    <div class="menu" *ngIf="isLoggedIn" (click)="toggleDropdown()">☰</div>
+    <div class="nav-links">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/brochure">Brochure</a>
+    </div>
+    <div class="dropdown" [ngClass]="{'show': dropdownOpen}">
+      <a routerLink="/select" (click)="closeDropdown()">Select</a>
+      <a routerLink="/bills" (click)="closeDropdown()">Bills</a>
+      <a routerLink="/warehouse" (click)="closeDropdown()">Warehouse</a>
+      <a routerLink="/warranty" (click)="closeDropdown()">Warranty</a>
+    </div>
+  </div>
+</nav>

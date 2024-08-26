@@ -1,0 +1,56 @@
+<!-- Button to toggle the form -->
+<br>
+<div class="button-container">
+<button (click)="toggleForm()" class="dark-button">Add Unit</button>
+</div>
+<br>
+<!-- Conditional form display -->
+<div *ngIf="showForm">
+  <form (ngSubmit)="onSubmit()" class="dark-form">
+    <label for="type">Type:</label>
+    <input id="type" name="type" [(ngModel)]="formData.type" required>
+
+    <label for="companyName">Company Name:</label>
+    <input id="companyName" name="companyName" [(ngModel)]="formData.companyName" required>
+
+    <label for="modelNo">Model Number:</label>
+    <input id="modelNo" name="modelNo" [(ngModel)]="formData.modelNo" required>
+
+    <label for="units">Units:</label>
+    <input id="units" name="units" [(ngModel)]="formData.units" type="number" required>
+    <div class="button-container">
+    <button type="submit" class="dark-button">Submit</button>
+  </div>
+  </form>
+</div>
+
+<!-- Conditional table display -->
+<div class="data-table-container" *ngIf="groupedWarehouseData.length">
+  <h3>Warehouse Data</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Units</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through each group -->
+      <ng-container *ngFor="let group of groupedWarehouseData">
+        <!-- Loop through each item in the group -->
+        <ng-container *ngFor="let item of group.items">
+          <tr>
+            <!-- Display group type only for the first item in the group -->
+            <td *ngIf="item === group.items[0]">{{ group.type }}</td>
+            <td *ngIf="item !== group.items[0]"></td>
+            <td>{{ item.companyName }}</td>
+            <td>{{ item.modelNo }}</td>
+            <td>{{ item.units }}</td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

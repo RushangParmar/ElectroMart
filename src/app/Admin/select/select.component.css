@@ -1,0 +1,64 @@
+/* Dark electronic theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e); /* Gradient background */
+  color: #dcdcdc; /* Light text color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center align content horizontally */
+  align-items: center; /* Center align content vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* Space between icons */
+}
+
+.icon-button {
+  width: 200px; /* Double the size (originally 100px) */
+  height: 200px; /* Double the size (originally 100px) */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Darker shadow on hover */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px; /* Box size */
+  height: 240px; /* Box size */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+}
+.icon-box.red {
+  background-color: #423f3f; /* Red background */
+}
+
+.icon-box.green {
+  background-color: #423f3f; /* Green background */
+}
+
+.icon-box.blue {
+  background-color: #423f3f; /* Blue background */
+}

@@ -1,0 +1,102 @@
+<br>
+<form #billForm="ngForm" (ngSubmit)="onSubmit()" class="dark-form">
+  <div class="form-container">
+    <!-- Customer Details Section -->
+    <div class="form-section customer-details">
+      <fieldset>
+        <legend>Customer Details</legend>
+        
+        <div>
+          <label for="randomNumber">Customer Id:</label>
+          <input id="randomNumber" name="randomNumber" [value]="randomNumber" readonly />
+        </div>
+        <div>
+          <label for="customerName">Customer Name:</label>
+          <input id="customerName" name="customerName" ngModel required />
+        </div>
+
+        <div>
+          <label for="customerPhone">Customer Phone No:</label>
+          <input id="customerPhone" name="customerPhone" ngModel required />
+        </div>
+
+        <div>
+          <label for="customerAddress">Customer Address:</label>
+          <input id="customerAddress" name="customerAddress" ngModel required />
+        </div>
+
+        <div>
+          <label for="customerAadhaar">Customer Aadhaar Card No:</label>
+          <input id="customerAadhaar" name="customerAadhaar" ngModel required />
+        </div>
+      </fieldset>
+    </div>
+    
+    <!-- Purchase Details Section -->
+    <div class="form-section purchase-details">
+      <fieldset>
+        <legend>Purchase Details</legend>
+
+        <div>
+          <label for="type">Type:</label>
+          <input id="type" name="type" [(ngModel)]="formData.type" required />
+        </div>
+
+        <div>
+          <label for="companyName">Company Name:</label>
+          <input id="companyName" name="companyName" [(ngModel)]="formData.companyName" required />
+        </div>
+
+        <div>
+          <label for="modelNo">Model No:</label>
+          <input id="modelNo" name="modelNo" [(ngModel)]="formData.modelNo" required />
+        </div>
+
+        <div>
+          <label for="serialNumber">Serial Number:</label>
+          <input id="serialNumber" name="serialNumber" ngModel required />
+        </div>
+
+        <div>
+          <label for="pricePerPiece">Price per Piece:</label>
+          <input id="pricePerPiece" name="pricePerPiece" type="number" ngModel (ngModelChange)="calculateTotal()" required />
+        </div>
+
+        <div>
+          <label for="units">Units:</label>
+          <input id="units" name="units" type="number" [(ngModel)]="formData.units" (ngModelChange)="calculateTotal()" required />
+        </div>
+
+        <div>
+          <label for="total">Total:</label>
+          <input id="total" name="total" [value]="total" readonly />
+        </div>
+
+        <div>
+          <label for="paymentMethod">Payment Method:</label>
+          <select id="paymentMethod" name="paymentMethod" ngModel required>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="cash">Cash</option>
+            <option value="online">Online Payment</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="warrantyType">Warranty Type:</label>
+          <select id="warrantyType" name="warrantyType" [(ngModel)]="formData.warrantyType" required>
+            <option value="soft Warranty">Soft Warranty</option>
+            <option value="company Warranty">Company Warranty</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="warrantyDuration">Warranty Duration:</label>
+          <input id="warrantyDuration" name="warrantyDuration" [(ngModel)]="formData.warrantyDuration" required />
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <br>
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,21 @@
+<h2>Warranties</h2>
+<!-- Container for the table to apply margins -->
+<div class="data-table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>Warranty Type</th>
+        <th>Warranty Last Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through each warranty -->
+      <tr *ngFor="let warranty of warranties">
+        <td>{{ warranty.customerId }}</td>
+        <td>{{ warranty.warrantyType }}</td>
+        <td>{{ warranty.warrantyLastDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

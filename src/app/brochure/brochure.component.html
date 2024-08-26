@@ -1,0 +1,20 @@
+<div *ngIf="isLoggedIn">
+  <button routerLink="/additem">Add New Item</button>
+</div>
+
+<div *ngFor="let type of objectKeys(groupedItems)">
+  <h2>{{ type }}</h2>
+  <div class="card-container">
+    <div *ngFor="let item of groupedItems[type]" class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{ item.companyName }}</h3>
+        <p class="card-text">Model No: {{ item.modelNo }}</p>
+        <p class="card-text">Price: ${{ item.price }}</p>
+        <p class="card-text">Description: {{ item.description }}</p>
+        <img [src]="item.imageLink" alt="{{ item.companyName }}" class="card-image">
+        <button (click)="makeBill(item)" class="btn btn-primary">Make Bill</button>
+      </div>
+    </div>
+  </div>
+</div>
+

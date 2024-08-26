@@ -1,0 +1,91 @@
+/* Dark electronic theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e; /* Dark background */
+  color: #dcdcdc; /* Light text color */
+  margin: 0;
+  padding: 20px;
+}
+
+form {
+  background-color: #636262; /* Darker form background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 1000px; /* Increase max-width to accommodate side-by-side sections */
+  margin: auto;
+}
+
+/* Container for the form sections */
+.form-container {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between sections */
+  gap: 30px; /* Space between sections */
+}
+
+/* Style for individual form sections */
+.form-section {
+  flex: 1; /* Flex-grow to ensure sections take up available space */
+  min-width: 0; /* Prevent shrinking below content size */
+}
+
+/* Style for fieldsets */
+fieldset {
+  border: 1px solid #444; /* Dark border */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 0; /* Remove default margin */
+  background-color: #333; /* Slightly lighter background for fieldset */
+}
+
+/* Style for legends */
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #66c0f4; /* Light blue color */
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f5f5f5; /* Slightly off-white for labels */
+}
+
+/* Style for input and select elements */
+input,
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555; /* Darker input border */
+  border-radius: 4px;
+  background-color: #2a2a2a; /* Darker input background */
+  color: #e0e0e0; /* Light text for inputs */
+  font-size: 1em;
+}
+
+/* Style for readonly inputs */
+input[readonly] {
+  background-color: #1e1e1e; /* Even darker for readonly inputs */
+}
+
+/* Style for submit button */
+button {
+  background-color: #66c0f4; /* Light blue for button */
+  color: #1e1e1e; /* Dark text on button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for button hover */
+button:hover {
+  background-color: #4aa3c4; /* Darker blue on hover */
+}

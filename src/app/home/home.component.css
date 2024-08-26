@@ -1,0 +1,90 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfbfb; /* Dark background for the container */
+}
+
+.top-section {
+  flex: 60%;
+  background-color: #f9f5f5; /* Darker background for the top section */
+  padding: 20px; /* Added padding for better spacing */
+}
+
+.bottom-section {
+  flex: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #636262; /* Darker background for the bottom section */
+}
+
+.address {
+  flex: 1;
+  color: #dcdcdc; /* Light text color */
+  text-align: right;
+}
+
+.business-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-card img {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #66c0f4; /* Light blue border for the business card image */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 33.3333%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%; /* Adjusted to fill the slide */
+  height: 100%; /* Ensure image fills the height of the container */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-radius: 10px;
+  border: 2px solid #66c0f4; /* Light blue border for slideshow images */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for arrows */
+  color: #66c0f4; /* Light blue color for arrow text */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}

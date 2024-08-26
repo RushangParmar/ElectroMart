@@ -1,0 +1,78 @@
+/* Dark theme styles for button and form */
+.dark-button {
+    background-color: #01000a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .button-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 20px; /* Add some space above the button */
+  }
+  .dark-button:hover {
+    background-color: #555;
+  }
+  
+  .dark-form {
+    background-color: #656565;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dark-form label {
+    color: #dcdcdc;
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .dark-form input {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #838383;
+    color: #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #080000;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: #494949;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #838383;
+  }
+  
+  .data-table tr:hover {
+    background-color: #484747;
+  }
+  
+  .data-table-container {
+    margin: 0 3%; /* 3% space on both sides */
+  }
+  
+  .data-table {
+    width: 100%; /* Make sure the table takes full width within the container */
+    border-collapse: collapse; /* Ensures borders are collapsed for cleaner look */
+  }

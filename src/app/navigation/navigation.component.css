@@ -1,0 +1,74 @@
+/* Dark electronic theme */
+nav {
+  background-color: #2d2d2d; /* Darker background for the navigation */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative; /* Ensure the dropdown is positioned correctly */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Ensure dropdown is positioned correctly */
+}
+
+.menu {
+  font-size: 1.5em;
+  color: #66c0f4; /* Light blue for menu icon */
+  cursor: pointer;
+  z-index: 1000; /* Ensure menu icon is on top */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+  color: #dcdcdc; /* Light text color */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #444; /* Darker background on hover */
+  color: #66c0f4; /* Light blue text on hover */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0; /* Align with the left edge of the menu icon */
+  background-color: #2d2d2d; /* Darker background for dropdown */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  z-index: 1000; /* Ensure dropdown is on top */
+}
+
+.dropdown.show {
+  display: flex; /* Show when toggled */
+}
+
+.dropdown a {
+  color: #dcdcdc; /* Light text color */
+  text-decoration: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #444; /* Dark border between items */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: #444; /* Darker background on hover */
+  color: #66c0f4; /* Light blue text on hover */
+}
+
+.dropdown a:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
